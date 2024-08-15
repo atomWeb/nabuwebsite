@@ -1,0 +1,40 @@
+---
+import Footer from '@components/shared/Footer.astro';
+import Navbar from '@components/shared/Navbar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Cristian Jose Perez Guerra Website' } =
+  Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <meta name="description" content={description} />
+    <meta name="author" content="Cristian Perez Guerra" />
+
+    <!-- OG MetaTags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <title>{title}</title>
+  </head>
+  <body
+    class="dark:bg-darkBlue dark:text-white min-h-screen grid grid-rows-[auto,1fr,auto]"
+  >
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,12 @@
+---
+import ThemeButton from './ThemeButton.astro';
+const { current = '' } = Astro.props;
+---
+
+<!-- Menu -->
+<nav class="flex items-center justify-center gap-5">
+  <a class="hover:text-accentBlue dark:hover:text-accentCyan" href="/about"
+    >Acerca de...</a
+  >
+  <ThemeButton />
+</nav>

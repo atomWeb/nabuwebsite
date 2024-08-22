@@ -1,0 +1,12 @@
+---
+import { HEAD_TITLE } from 'src/consts';
+---
+
+<!-- Dinamic logo bg-logo-light-mode dark:bg-logo-dark-mode -->
+<a class="hover:text-accentBlue dark:hover:text-accentCyan" href="/">
+  <div
+    class="bg-[url('/assets/logo-light-mode.svg')] dark:bg-[url('/assets/logo-dark-mode.svg')] h-20 w-80 bg-no-repeat mx-auto md:mx-20 justify-between content-center"
+  >
+    <span class="text-xl pl-4 uppercase font-semibold">{HEAD_TITLE}</span>
+  </div>
+</a>

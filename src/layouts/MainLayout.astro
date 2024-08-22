@@ -1,14 +1,14 @@
 ---
 import Footer from '@components/shared/Footer.astro';
 import Navbar from '@components/shared/Navbar.astro';
+import { SITE_DESCRIPTION } from 'src/consts';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = 'Cristian Jose Perez Guerra Website' } =
-  Astro.props;
+const { title, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <html lang="es">
